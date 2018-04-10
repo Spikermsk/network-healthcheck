@@ -1,0 +1,385 @@
+[
+    {
+        "id": "L_646829496481092083",
+        "organizationId": "549236",
+        "name": "Sandbox 1 - San Francisco",
+        "timeZone": "US/Mountain",
+        "tags": " LearningLabSandbox ",
+        "type": "combined"
+    },
+    {
+        "id": "L_646829496481098130",
+        "organizationId": "549236",
+        "name": "Sandbox 2 - Galway Ireland",
+        "timeZone": "America/New_York",
+        "tags": " Global Sandbox Sandbox2 ",
+        "type": "combined"
+    },
+    {
+        "id": "L_646829496481095933",
+        "organizationId": "549236",
+        "name": "Sandbox 3 - Las Vegas",
+        "timeZone": "America/Los_Angeles",
+        "tags": " Sandbox Sandbox2 ",
+        "type": "combined"
+    },
+    {
+        "id": "L_646829496481095588",
+        "organizationId": "549236",
+        "name": "Sandbox 4 - Tokyo Japan",
+        "timeZone": "Asia/Tokyo",
+        "tags": " Sandbox ",
+        "type": "combined"
+    },
+    {
+        "id": "L_646829496481098716",
+        "organizationId": "549236",
+        "name": "Sandbox 5 - Australia",
+        "timeZone": "America/Los_Angeles",
+        "tags": " Sandbox ",
+        "type": "combined"
+    },
+    {
+        "id": "L_646829496481095660",
+        "organizationId": "549236",
+        "name": "Sandbox 6 - Vilnius Lithuana",
+        "timeZone": "Europe/Dublin",
+        "tags": " Sandbox ",
+        "type": "combined"
+    },
+    {
+        "id": "N_646829496481143399",
+        "organizationId": "549236",
+        "name": "Sandbox 8 - Vienna",
+        "timeZone": "Europe/Vienna",
+        "tags": null,
+        "type": "wireless"
+    },
+    {
+        "id": "L_646829496481098845",
+        "organizationId": "549236",
+        "name": "bluewifi",
+        "timeZone": "Singapore",
+        "tags": null,
+        "type": "combined"
+    },
+    {
+        "id": "N_646829496481144030",
+        "organizationId": "549236",
+        "name": "SNOW Angular Dallas-1506",
+        "timeZone": "America/Chicago",
+        "tags": " test ",
+        "type": "wireless"
+    },
+    {
+        "id": "N_646829496481144041",
+        "organizationId": "549236",
+        "name": "test - angulr - 352",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144042",
+        "organizationId": "549236",
+        "name": "Test - angular - 413",
+        "timeZone": "Europe/Prague",
+        "tags": " Test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144043",
+        "organizationId": "549236",
+        "name": "test - angular - 417",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144044",
+        "organizationId": "549236",
+        "name": "Test - angular - 428",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144045",
+        "organizationId": "549236",
+        "name": "Test - Demo - Meraki",
+        "timeZone": "Europe/Prague",
+        "tags": " HQ ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144047",
+        "organizationId": "549236",
+        "name": "test - ang - 500",
+        "timeZone": "Europe/Prague",
+        "tags": " tes ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144048",
+        "organizationId": "549236",
+        "name": "test - ang - 508",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144049",
+        "organizationId": "549236",
+        "name": "Test - ang - 513",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144050",
+        "organizationId": "549236",
+        "name": "Test - ang - 524",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144051",
+        "organizationId": "549236",
+        "name": "Test ang phone 20t3",
+        "timeZone": "Europe/Prague",
+        "tags": " Test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144067",
+        "organizationId": "549236",
+        "name": "Test - Network #123",
+        "timeZone": "Europe/Prague",
+        "tags": " Test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144068",
+        "organizationId": "549236",
+        "name": "Test - Demo",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "wireless",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144069",
+        "organizationId": "549236",
+        "name": "TEST - Postman - 334",
+        "timeZone": "Europe/Amsterdam",
+        "tags": " test ",
+        "type": "wireless"
+    },
+    {
+        "id": "N_646829496481144070",
+        "organizationId": "549236",
+        "name": "TEST - Postman - 335",
+        "timeZone": "America/New_York",
+        "tags": " test ",
+        "type": "wireless"
+    },
+    {
+        "id": "N_646829496481144072",
+        "organizationId": "549236",
+        "name": "TEST - Postman - 400",
+        "timeZone": "America/Los_Angeles",
+        "tags": " test ",
+        "type": "wireless"
+    },
+    {
+        "id": "L_646829496481098965",
+        "organizationId": "549236",
+        "name": "test ang 1026",
+        "timeZone": "Europe/Prague",
+        "tags": " api test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098966",
+        "organizationId": "549236",
+        "name": "test ang 1033",
+        "timeZone": "Europe/Prague",
+        "tags": " api test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098967",
+        "organizationId": "549236",
+        "name": "test ang 1036",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098968",
+        "organizationId": "549236",
+        "name": "test - ang 1037",
+        "timeZone": "Europe/Prague",
+        "tags": null,
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098969",
+        "organizationId": "549236",
+        "name": "test ang 1102",
+        "timeZone": "Europe/Prague",
+        "tags": " api test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098970",
+        "organizationId": "549236",
+        "name": "Test - ang 1107",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098971",
+        "organizationId": "549236",
+        "name": "test ang 1109",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098972",
+        "organizationId": "549236",
+        "name": "Test - ang 1202",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098973",
+        "organizationId": "549236",
+        "name": "test",
+        "timeZone": "Europe/Prague",
+        "tags": null,
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098974",
+        "organizationId": "549236",
+        "name": "test - ang 1248",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098975",
+        "organizationId": "549236",
+        "name": "Test - ang - 108",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098976",
+        "organizationId": "549236",
+        "name": "Test ang 141",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098977",
+        "organizationId": "549236",
+        "name": "test - ang 147",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098978",
+        "organizationId": "549236",
+        "name": "test - ang - 149",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098981",
+        "organizationId": "549236",
+        "name": "test - ang - 1052",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098982",
+        "organizationId": "549236",
+        "name": "test - ang - 1223",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098983",
+        "organizationId": "549236",
+        "name": "test - ang - 1228",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098984",
+        "organizationId": "549236",
+        "name": "test - ang - 1259",
+        "timeZone": "Europe/Prague",
+        "tags": " test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "L_646829496481098987",
+        "organizationId": "549236",
+        "name": "test - angular - 430",
+        "timeZone": "Europe/Prague",
+        "tags": " api test ",
+        "type": "combined",
+        "configTemplateId": "L_646829496481093191"
+    },
+    {
+        "id": "N_646829496481144175",
+        "organizationId": "549236",
+        "name": "excap-Eric",
+        "timeZone": "America/Los_Angeles",
+        "tags": null,
+        "type": "wireless"
+    }
+]
