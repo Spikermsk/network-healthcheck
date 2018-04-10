@@ -1,12 +1,10 @@
 import asyncio
 from websockets import connect
-
-# host may be 10.255.157.81
-# no reachability
+import json
 
 class EchoWebsocket:
     async def __aenter__(self):
-        self._conn = connect("wss://10.255.157.81")
+        self._conn = connect("ws://rsage.io:8080/unity")
         self.websocket = await self._conn.__aenter__()
         return self
 
@@ -22,8 +20,13 @@ class EchoWebsocket:
 
 async def main():
     async with EchoWebsocket() as echo:
-        await echo.send("Hello!")
-        print(await echo.receive())  # "Hello!"
+
+        while True:
+            message = {"cmd":"appCmdWithToken","data":{"appName":"CortexAccess","appCmd":"subscribeToTopic","appData":"fakestats"}}
+
+
+            await echo.send(json.dumps(message))
+            print(await echo.receive())  # "Hello!"
 
 
 if __name__ == '__main__':

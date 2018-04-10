@@ -19,6 +19,11 @@ class Meraki(object):
         self.status = health
         self.clients = clients
 
+    def request(self, url):
+        return requests.request(method="GET",
+                                url=url,
+                                headers=session)
+
     @classmethod
     def from_serial(cls, session, network_id, serial):
         # re-write with aysyncio when you get a moment
@@ -71,9 +76,12 @@ class AccessPoint(Meraki):
     pass
 
 class Switch(Meraki):
-    pass
+    @property
+    def switchports(self):
+        return self.request(url=f"https://api.meraki.com/api/v0/devices/{self.serial_number}/switchPorts").json()
 
-class Security(Meraki):
+
+class SecurityAppliance(Meraki):
     pass
 
 
