@@ -2,7 +2,7 @@
 from getpass import getpass
 import requests
 import json
-# from .classes import AccessPoint
+from meraki.classes import Meraki, AccessPoint, Switch, Security
 
 # key = getpass("Enter API key:")
 
@@ -25,21 +25,39 @@ networks = requests.request(method="GET",
 
 # print(json.dumps(networks.json(), indent=4))
 
-for network in networks.json():
-    net_id = network["id"]
-    devices = requests.request(method="GET",
-                               url=f"https://api.meraki.com/api/v0/networks/{net_id}/devices",
-                               headers=headers)
-    print("#" + network["name"])
-    print(json.dumps(devices.json(), indent=4))
-    print("#" * 80)
+
+# for network in networks.json():
+#     net_id = network["id"]
+#     devices = requests.request(method="GET",
+#                                url=f"https://api.meraki.com/api/v0/networks/{net_id}/devices",
+#                                headers=headers)
+#
+#     for device in devices.json():
+#         inventory.append(Meraki.from_serial(session=headers, network_id=net_id, serial=device["serial"]))
+
+
+
+    #
+    # print("#" + network["name"])
+    # print(json.dumps(devices.json(), indent=4))
+    # print("#" * 80)
 # print(json.dumps(networks.json()))
 # #
 # #
-# devices = requests.request(method="GET",
-#                             url="https://api.meraki.com/api/v0/networks/L_646829496481092083/devices",
-#                             headers=headers)
+devices = requests.request(method="GET",
+                            url="https://api.meraki.com/api/v0/networks/L_646829496481092083/devices",
+                            headers=headers)
 
+
+inventory = []
+for device in devices.json():
+    inventory.append(Meraki.from_serial(session=headers, network_id="L_646829496481092083", serial=device["serial"]))
+
+
+print(inventory)
+
+for thing in inventory:
+    print(thing.model, thing.serial_number, thing.lan_ip)
 
 # print(json.dumps(devices.json(), indent=4))
 #

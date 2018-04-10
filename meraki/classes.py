@@ -50,14 +50,19 @@ class Meraki(object):
         device = dev.json()
 
         for i in status.json():
-            health = i["status"]
+            if "status" in i.keys():
+                health = i["status"]
 
         for l in locations.json():
             if l["id"] == network_id:
                 location = l["name"]
                 break
 
-        return cls(location=location, serial_number=serial, lan_ip=device["lanIp"], mac=device["mac"],
+        lan_ip = "No IP Discovered"
+        if "lanIP" in device.keys():
+            lan_ip = device["lanIp"]
+
+        return cls(location=location, serial_number=serial, lan_ip=lan_ip, mac=device["mac"],
                    model=device["model"], name=device["name"], network_id=device["networkId"], health=health,
                    clients=clients)
 
