@@ -71,6 +71,13 @@ class Meraki(object):
                    model=device["model"], name=device["name"], network_id=device["networkId"], health=health,
                    clients=clients)
 
+    @staticmethod
+    def get_all_locations():
+        r = requests.request(method="GET",
+                             url="https://api.meraki.com/api/v0/organizations/549236/networks",
+                             headers=session)
+
+        return r.json()
 
 class AccessPoint(Meraki):
     pass

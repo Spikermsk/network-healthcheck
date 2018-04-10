@@ -57,18 +57,20 @@ headers = {"X-Cisco-Meraki-API-Key" : key,
 # print(json.dumps(networks.json()))
 # #
 # #
-devices = requests.request(method="GET",
-                            url="https://api.meraki.com/api/v0/networks/L_582090251837636767/devices",
-                            headers=headers)
+# devices = requests.request(method="GET",
+#                             url="https://api.meraki.com/api/v0/networks/L_582090251837636767/devices",
+#                             headers=headers)
+#
+#
+# inventory = []
+# for device in devices.json():
+#     inventory.append(Meraki.from_serial(session=headers, network_id="L_582090251837636767", serial=device["serial"]))
+#
+# for i in inventory:
+#     print(i.status)
 
 
-inventory = []
-for device in devices.json():
-    inventory.append(Meraki.from_serial(session=headers, network_id="L_582090251837636767", serial=device["serial"]))
-
-for i in inventory:
-    print(i.status)
-
+print(Meraki.get_all_locations())
 
 # print(inventory)
 #
