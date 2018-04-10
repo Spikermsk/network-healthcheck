@@ -1,5 +1,7 @@
 import requests
 
+key = "093b24e85df15a3e66f1fc359f4c48493eaa1b73"
+
 session = {"X-Cisco-Meraki-API-Key" : key,
            'Content-type': 'Application/json',
            'Accept': 'Application/json'}
