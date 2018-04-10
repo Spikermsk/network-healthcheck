@@ -8,7 +8,7 @@ from meraki.classes import Meraki, AccessPoint, Switch, SecurityAppliance
 
 # sandbox API key
 
-key = "093b24e85df15a3e66f1fc359f4c48493eaa1b73"
+key = "542ed166c361826ad9a7f9d3038090eabb146728"
 
 headers = {"X-Cisco-Meraki-API-Key" : key,
            'Content-type': 'Application/json',
@@ -18,10 +18,23 @@ headers = {"X-Cisco-Meraki-API-Key" : key,
 #                        url="https://api.meraki.com/api/v0/organizations",
 #                        headers=headers)
 # #
+# print(json.dumps(org.json(), indent=4))
+# #
 # #
 # networks = requests.request(method="GET",
-#                             url="https://api.meraki.com/api/v0/organizations/549236/networks",
+#                             url="https://api.meraki.com/api/v0/organizations/183001/networks",
 #                             headers=headers)
+#
+# print(json.dumps(networks.json(), indent=4))
+
+# checking for good
+# 681155 has devices
+#
+# networks = requests.request(method="GET",
+#                             url="https://api.meraki.com/api/v0/organizations/681155/networks",
+#                             headers=headers)
+#
+# print(networks.content)
 
 # print(json.dumps(networks.json(), indent=4))
 
@@ -45,15 +58,20 @@ headers = {"X-Cisco-Meraki-API-Key" : key,
 # #
 # #
 # devices = requests.request(method="GET",
-#                             url="https://api.meraki.com/api/v0/networks/L_646829496481092083/devices",
+#                             url="https://api.meraki.com/api/v0/networks/L_582090251837636767/devices",
 #                             headers=headers)
 #
 #
 # inventory = []
 # for device in devices.json():
-#     inventory.append(Meraki.from_serial(session=headers, network_id="L_646829496481092083", serial=device["serial"]))
+#     inventory.append(Meraki.from_serial(session=headers, network_id="L_582090251837636767", serial=device["serial"]))
 #
-#
+# for i in inventory:
+#     print(i.status)
+
+
+print(Meraki.get_all_locations())
+
 # print(inventory)
 #
 # for thing in inventory:
@@ -61,14 +79,18 @@ headers = {"X-Cisco-Meraki-API-Key" : key,
 
 # print(json.dumps(devices.json(), indent=4))
 
-switch = requests.request(method="GET",
-                          url="https://api.meraki.com/api/v0/devices/Q2HP-WH5E-MK7H/switchPorts",
-                          headers=headers)
+# switch = requests.request(method="GET",
+#                           url="https://api.meraki.com/api/v0/devices/Q2HP-WH5E-MK7H/switchPorts",
+#                           headers=headers)
+#
+# myswitch = Switch.from_serial(session=headers, network_id="L_646829496481092083", serial="Q2HP-WH5E-MK7H")
+#
+#
+# # print(myswitch.switchports)
+#
+# for i in myswitch.switchports:
+#     print(i["number"], i["enabled"])
 
-myswitch = Switch.from_serial(session=headers, network_id="L_646829496481092083", serial="Q2HP-WH5E-MK7H")
-
-
-print(myswitch.switchports)
 
 # dir(myswitch)
 # print(myswitch.switchports())
