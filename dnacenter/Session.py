@@ -34,6 +34,7 @@ class Session(object):
                 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
             except AttributeError:
                 pass
+
         r = requests.post(
             url='https://' + dnacenter + '/api/system/v1/auth/token',
             headers=headers,
@@ -43,10 +44,8 @@ class Session(object):
         auth_header = {'Content-type': 'Application/json',
                        'Accept': 'Application/json',
                        'X-Auth-Token': r.json()["Token"]}
-        # print(r.content)
+
         return cls(username, dnacenter, auth_header, ssl_verify)
-
-
 
     def _request(self, url, request_method='GET', payload=None, **kwargs):
 
@@ -94,10 +93,10 @@ class Session(object):
         return self._request(url=f"https://{self.dnacenter}/api/v1/network-device")
 
     def get_device_by_id(self, dev_id):
-        return self._request(url=f"https://{self.dnacenter}/api/v1/host/{dev_id}/location")
-
+        return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/{dev_id}")
+    #
     def get_device_locations(self):
-        return self._request(url=f"https://{self.dnacenter}/api/v1//network-device/location")
+        return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/location")
 
 # "host/"+id+"/location"
 # network-device/{id}/location
@@ -113,7 +112,7 @@ dna_center = Session.login(username="devnetuser", password="Cisco123!", dnacente
 # print(dna_center.dnacenter)
 # print(dna_center.get_devices())
 print(dna_center.get_device_locations())
-# print(dna_center.get_device_by_id(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"))
+# print(json.dumps(dna_center.get_device_by_id(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
 
 # "https://sandboxdnac.cisco.com/api/v1/network-device"
 
@@ -123,8 +122,5 @@ https://sandboxdnac.cisco.com/api/system/v1/auth/login
 Username: devnetuser
 Password: Cisco123!
 
-
-
-https://IP-address/api/v1/network-device
 
 """
