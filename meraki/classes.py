@@ -7,10 +7,6 @@ session = {"X-Cisco-Meraki-API-Key" : key,
            'Accept': 'Application/json'}
 #
 class Meraki(object):
-    pass
-
-
-class AccessPoint(Meraki):
 
     def __init__(self, location, serial_number, lan_ip, mac, model, name, network_id, health, clients):
         self.location = location
@@ -20,11 +16,12 @@ class AccessPoint(Meraki):
         self.model = model
         self.name = name
         self.network_id = network_id
-        self.health = health
+        self.status = health
         self.clients = clients
 
     @classmethod
     def from_serial(cls, session, network_id, serial):
+        # re-write with aysyncio when you get a moment
         dev = requests.request(method="GET",
                                   url=f"https://api.meraki.com/api/v0/networks/{network_id}/devices/{serial}",
                                   headers=session)
@@ -64,13 +61,24 @@ class AccessPoint(Meraki):
                    model=device["model"], name=device["name"], network_id=device["networkId"], health=health,
                    clients=clients)
 
+
+class AccessPoint(Meraki):
+    pass
+
+class Switch(Meraki):
+    pass
+
+class Security(Meraki):
+    pass
+
+
 def main():
     test = AccessPoint.from_serial(session=session, network_id="L_646829496481092083", serial="Q2RD-4ZSU-DLC6")
 
     # print(type(test))
 
     print(test.clients)
-
+    print(test.location)
 
 if __name__ == "__main__":
     main()

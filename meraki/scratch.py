@@ -8,6 +8,8 @@ import json
 
 # sandbox API key
 
+key = "093b24e85df15a3e66f1fc359f4c48493eaa1b73"
+
 headers = {"X-Cisco-Meraki-API-Key" : key,
            'Content-type': 'Application/json',
            'Accept': 'Application/json'}
@@ -21,12 +23,25 @@ networks = requests.request(method="GET",
                             url="https://api.meraki.com/api/v0/organizations/549236/networks",
                             headers=headers)
 
-print(json.dumps(networks.json()))
+# print(json.dumps(networks.json(), indent=4))
+
+for network in networks.json():
+    net_id = network["id"]
+    devices = requests.request(method="GET",
+                               url=f"https://api.meraki.com/api/v0/networks/{net_id}/devices",
+                               headers=headers)
+    print("#" + network["name"])
+    print(json.dumps(devices.json(), indent=4))
+    print("#" * 80)
+# print(json.dumps(networks.json()))
 # #
 # #
 # devices = requests.request(method="GET",
 #                             url="https://api.meraki.com/api/v0/networks/L_646829496481092083/devices",
 #                             headers=headers)
+
+
+# print(json.dumps(devices.json(), indent=4))
 #
 # switch = requests.request(method="GET",
 #                           url="https://api.meraki.com/api/v0/devices/Q2DP-H886-5KP3/switchPorts",
