@@ -127,12 +127,13 @@ class Session(object):
 dna_center = Session.login(username="devnetuser", password="Cisco123!", dnacenter="sandboxdnac.cisco.com")
 # print(dna_center.get_devices())
 # print(dna_center.dnacenter)
-print(json.dumps(dna_center.get_site_topology_device(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
+# print(json.dumps(dna_center.get_site_topology_device(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
 # print(json.dumps(dna_center.get_device_module(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"),indent=4))
 # print(json.dumps(dna_center.get_device_by_id(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
 # not very interesting returns the same thing as the "get all modules" call
 # print(json.dumps(dna_center.get_device_location(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"),indent=4))
 
+print(dna_center.token)
 # "https://sandboxdnac.cisco.com/api/v1/network-device"
 
 # https://sandboxdnac.cisco.com/api/system/v1/auth/login
