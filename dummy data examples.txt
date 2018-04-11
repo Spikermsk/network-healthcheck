@@ -1,0 +1,86 @@
+*****CIO*****
+
+-For health status: /cio/stats/
+{ "error":int32, "warning":int32, "ok":int32, "inactive":int32  };
+Example
+{
+    "error" : "0",
+    "warning" : "2",
+    "ok" : "4",
+    "inactive" : "2"
+}
+
+-for SLA criticals or violations: /cio/slas
+{ "device_availability" : string, "uptime" : string, "problem_detected" : int32, "critical_status" : string}
+Example
+{
+    "device_availability" : "90%",
+    "uptime" : "4 days, 6:20:17.57",
+    "problem_detected" : 5,
+    "critical_status" : "False"
+}
+
+
+*****DIRECTOR*****
+-for tickets status: /director/ticketstatus
+{ "opened":int32, "closed":int32 };
+
+Example
+{
+    "opened" : 30,
+    "closed" : 70
+}
+
+-for MTTR /director/mttr
+{ "routers":int32, "switches":int32, "other":int32 };
+
+Example
+{
+    "router" : 3,
+    "switches" : 10,
+    "other" : 1
+}
+
+*****MANAGER*****
+-for Wan Availability: /manager/availability
+{ "total_time":int32, "up":int32, "down":int32  };
+
+Example
+{ "total_time":200, 
+  "up":190, 
+  "down":10  
+};
+
+
+-for Latency: /manager/latency
+{ "avgLatencyByHour":string array};
+
+Example
+{
+    "avgLatencyByHour" : [
+        "20",
+        "30",
+        "90",
+        "50",
+        "88",
+        "77",
+        "56",
+        "33",
+        "10",
+        "40",
+        "43",
+        "45",
+        "50",
+        "49",
+        "47",
+        "40",
+        "55",
+        "60",
+        "54",
+        "51",
+        "44",
+        "40",
+        "30",
+        "28",
+    ]
+}
