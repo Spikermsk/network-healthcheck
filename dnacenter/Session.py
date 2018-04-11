@@ -93,16 +93,27 @@ class Session(object):
         return self._request(url=f"https://{self.dnacenter}/api/v1/network-device")
 
     def get_device_by_id(self, dev_id):
+        print(f"https://{self.dnacenter}/api/v1/network-device/{dev_id}")
         return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/{dev_id}")
-    #
+
+    # Locations is broken
     def get_device_locations(self):
         return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/location")
+
+
+    #/api/v1/network-device/{UUID}/location
+    def get_device_location(self, dev_id):
+        print(f"https://{self.dnacenter}/api/v1/network-device/{dev_id}/location")
+        return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/{dev_id}/location")
 
     def get_device_module(self, dev_id):
         return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/module?deviceId={dev_id}")
 
     def get_module_by_id(self, mod_id):
         return self._request(url=f"https://{self.dnacenter}/api/v1/network-device/module/{mod_id}")
+
+    def get_site_topology(self):
+        return self._request(url=f"https://{self.dnacenter}/api/v1/topology/site-topology")
 
 # "host/"+id+"/location"
 # network-device/{id}/location
@@ -116,11 +127,11 @@ class Session(object):
 dna_center = Session.login(username="devnetuser", password="Cisco123!", dnacenter="sandboxdnac.cisco.com")
 # print(dna_center.get_devices())
 # print(dna_center.dnacenter)
-# print(dna_center.get_devices())
+print(json.dumps(dna_center.get_site_topology_device(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
 # print(json.dumps(dna_center.get_device_module(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"),indent=4))
 # print(json.dumps(dna_center.get_device_by_id(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
 # not very interesting returns the same thing as the "get all modules" call
-print(json.dumps(dna_center.get_module_by_id(mod_id="5b75b5fd-21e3-4deb-a8f6-6094ff73e2c8"),indent=4))
+# print(json.dumps(dna_center.get_device_location(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"),indent=4))
 
 # "https://sandboxdnac.cisco.com/api/v1/network-device"
 

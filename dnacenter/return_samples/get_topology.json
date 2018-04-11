@@ -1,0 +1,67 @@
+{
+  "response": {
+    "sites": [
+      {
+        "id": "a986dd29-c664-41d3-8a7b-c1c75dbed463",
+        "name": "MEL-1",
+        "parentId": "695061f9-8525-4559-a873-3ebbf1412217",
+        "latitude": "-37.814542",
+        "longitude": "144.970501",
+        "locationType": "building",
+        "locationAddress": "101 Collins Street, Melbourne, Victoria 3000, Australia",
+        "locationCountry": "Australia",
+        "displayName": "250251",
+        "groupNameHierarchy": "Global/Melbourne/MEL-1"
+      },
+      {
+        "id": "6816b026-0f38-43ea-aca7-2f6991c09592",
+        "name": "Sydney",
+        "parentId": "decd04ee-80d5-4a07-a467-ee4b4681f1f2",
+        "latitude": "",
+        "longitude": "",
+        "locationType": "area",
+        "locationAddress": "",
+        "locationCountry": "",
+        "displayName": "32037",
+        "groupNameHierarchy": "Global/Sydney"
+      },
+      {
+        "id": "d1211a0f-8bc3-4345-9b01-7a63e35f563e",
+        "name": "NSYD5",
+        "parentId": "6816b026-0f38-43ea-aca7-2f6991c09592",
+        "latitude": "-33.837053",
+        "longitude": "151.206266",
+        "locationType": "building",
+        "locationAddress": "177 Pacific Hwy, North Sydney, New South Wales 2060, Australia",
+        "locationCountry": "Australia",
+        "displayName": "32038",
+        "groupNameHierarchy": "Global/Sydney/NSYD5"
+      },
+      {
+        "id": "d7023771-49fc-4c11-a329-3ff590cf8730",
+        "name": "floor22",
+        "parentId": "d1211a0f-8bc3-4345-9b01-7a63e35f563e",
+        "latitude": "",
+        "longitude": "",
+        "locationType": "floor",
+        "locationAddress": "177 Pacific Hwy, North Sydney, New South Wales 2060, Australia",
+        "locationCountry": "",
+        "displayName": "250252",
+        "groupNameHierarchy": "Global/Sydney/NSYD5/floor22"
+      },
+      {
+        "id": "695061f9-8525-4559-a873-3ebbf1412217",
+        "name": "Melbourne",
+        "parentId": "decd04ee-80d5-4a07-a467-ee4b4681f1f2",
+        "latitude": "",
+        "longitude": "",
+        "locationType": "area",
+        "locationAddress": "",
+        "locationCountry": "",
+        "displayName": "250250",
+        "groupNameHierarchy": "Global/Melbourne"
+      }
+    ]
+  },
+  "version": "1.0"
+}
