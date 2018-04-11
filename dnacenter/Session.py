@@ -115,6 +115,9 @@ class Session(object):
     def get_site_topology(self):
         return self._request(url=f"https://{self.dnacenter}/api/v1/topology/site-topology")
 
+    def get_site_members(self, site_id):
+        return self._request(url=f"https://{self.dnacenter}/api/v1/group/{site_id}/member?memberType=networkdevice&level=0")
+        #api/v1/group/<siteId>/member?memberType=networkdevice&level=0
 # "host/"+id+"/location"
 # network-device/{id}/location
 #
@@ -132,8 +135,8 @@ dna_center = Session.login(username="devnetuser", password="Cisco123!", dnacente
 # print(json.dumps(dna_center.get_device_by_id(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"), indent=4))
 # not very interesting returns the same thing as the "get all modules" call
 # print(json.dumps(dna_center.get_device_location(dev_id="d5bbb4a9-a14d-4347-9546-89286e9f30d4"),indent=4))
-
-print(dna_center.token)
+print(json.dumps(dna_center.get_site_members(site_id="a986dd29-c664-41d3-8a7b-c1c75dbed463"), indent=4))
+# print(dna_center.token)
 # "https://sandboxdnac.cisco.com/api/v1/network-device"
 
 # https://sandboxdnac.cisco.com/api/system/v1/auth/login
