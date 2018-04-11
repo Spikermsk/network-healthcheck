@@ -1,4 +1,3 @@
-
 *****CIO*****
 
 -For health status: /cio/stats/
@@ -10,13 +9,13 @@ Examples
 { "status":"inactive", "count":2 };
 
 -for SLA criticals or violations: /cio/slas
-{ "divice_availability" : string, "uptime" : string, "problem_detected" : int32, "crirical_status" : string}
+{ "device_availability" : string, "uptime" : string, "problem_detected" : int32, "critical_status" : string}
 Example
 {
-    "divice_availability" : "90%",
+    "device_availability" : "90%",
     "uptime" : "4 days, 6:20:17.57",
     "problem_detected" : 5,
-    "crirical_status" : "False"
+    "critical_status" : "False"
 }
 
 
@@ -48,11 +47,11 @@ Example
 
 
 -for Latency: /manager/latency
-{ "latency":string array};
+{ "avgLatencyByHour":string array};
 
 Example
 {
-    "latency" : [
+    "avgLatencyByHour" : [
         "20",
         "30",
         "90",
@@ -79,7 +78,6 @@ Example
         "28",
     ]
 }
-
 
 
 
