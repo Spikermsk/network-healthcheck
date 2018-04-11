@@ -1,12 +1,14 @@
 *****CIO*****
 
 -For health status: /cio/stats/
-{ "status":string, "count":int32 };
-Examples
-{ "status":"error", "count":0 };
-{ "status":"warning", "count":2 };
-{ "status":"ok", "count":4 };
-{ "status":"inactive", "count":2 };
+{ "error":int32, "warning":int32, "ok":int32, "inactive":int32  };
+Example
+{
+    "error" : "0",
+    "warning" : "2",
+    "ok" : "4",
+    "inactive" : "2"
+}
 
 -for SLA criticals or violations: /cio/slas
 { "device_availability" : string, "uptime" : string, "problem_detected" : int32, "critical_status" : string}
@@ -21,29 +23,33 @@ Example
 
 *****DIRECTOR*****
 -for tickets status: /director/ticketstatus
-{ "status":string, "count":int32 };
+{ "opened":int32, "closed":int32 };
 
-Examples
-{ "status":"opened", "count":30 };
-{ "status":"closed", "count":70 };
-
+Example
+{
+    "opened" : 30,
+    "closed" : 70
+}
 
 -for MTTR /director/mttr
-{ "device":string, "hours":int32 };
+{ "routers":int32, "switches":int32, "other":int32 };
 
-Examples
-{ "device":"router", "hours":3 };
-{ "device":"switches", "hours":10 };
-{ "device":"other devices", "hours":1 };
-
-
+Example
+{
+    "router" : 3,
+    "switches" : 10,
+    "other" : 1
+}
 
 *****MANAGER*****
 -for Wan Availability: /manager/availability
 { "total_time":int32, "up":int32, "down":int32  };
 
 Example
-{ "total_time":200, "up":190, "down":10  };
+{ "total_time":200, 
+  "up":190, 
+  "down":10  
+};
 
 
 -for Latency: /manager/latency
@@ -78,7 +84,3 @@ Example
         "28",
     ]
 }
-
-
-
-
