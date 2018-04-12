@@ -1,0 +1,98 @@
+swagger: '2.0'
+info:
+  description: This API is used to access NHC Stat Routes
+  version: 1.0.0
+  title: NHC Routes
+host: 'localhost:8080'
+basePath: /api/v2
+tags:
+  - name: Statistics
+schemes:
+  - http
+paths:
+  /cio/stats:
+    get:
+      tags:
+        - Statistics
+      operationId: cioStats
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+      x-swagger-router-controller: serviceManager
+  /cio/slas:
+    get:
+      tags:
+        - Statistics
+      operationId: cioSlas
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+      x-swagger-router-controller: serviceManager
+  /director/ticketstatus:
+    get:
+      tags:
+        - Statistics
+      operationId: directorTicketStatus
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+      x-swagger-router-controller: serviceManager
+  /director/mttr:
+    get:
+      tags:
+        - Statistics
+      operationId: directorMttr
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+      x-swagger-router-controller: serviceManager
+  /manager/availability:
+    get:
+      tags:
+        - Statistics
+      operationId: managerAvailability
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+      x-swagger-router-controller: serviceManager
+  /manager/latency:
+    get:
+      tags:
+        - Statistics
+      operationId: managerLatency
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+      x-swagger-router-controller: serviceManager
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: api_key
+    in: header
+externalDocs:
+  description: rSage Login
+  url: 'http://rsage.io:8080'
