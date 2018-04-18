@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NetHealthCheckDaily</string>
+    <string name="title_activity_bar_chart">BarChartActivity</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+</resources>

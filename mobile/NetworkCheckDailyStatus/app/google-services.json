@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1015141225641",
+    "firebase_url": "https://network-health-check-daily.firebaseio.com",
+    "project_id": "network-health-check-daily",
+    "storage_bucket": "network-health-check-daily.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015141225641:android:5aff397b31b8a0a0",
+        "android_client_info": {
+          "package_name": "com.devnetcreate.ncheckdaily.nethealthcheckdaily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015141225641-eei4ul4a1dngo54raetm0iq0ddjcvijp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmqmvo8Qp_rXQ2D_EHimrrE5gNg1MBEfU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
